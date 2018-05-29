@@ -1,0 +1,25 @@
+/** Comentário que vai para o arquivo css **/
+/** O valor a direita do argumento é o padrão, caso o argumento não seja informado */
+//@mixin sombra-padrao {
+//  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+//  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+//}
+
+%sombra-padrao {
+  -webkit-box-shadow: 0.2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+%image-replacement {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+@function multiplica-pela-fonte ($multiplicador){
+  @return round($multiplicador * $tamanho-da-fonte-padrao);
+}
+
+////////////////////////
+@import "compass/css3";
+@import "compass/utilities";
